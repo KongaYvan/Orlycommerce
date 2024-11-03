@@ -1,0 +1,46 @@
+<!--<div class="column is-3 product-list-item">
+                <div class="box">
+                    <figure class="image is-4by3 mb-4">
+                        <img src="{{ product.get_thumbnail }}" alt="{{product.title}}">
+                    </figure>
+
+                    <h2 class="subtitle">{{product.title}}</h2>
+
+                    <h3 class="price is-size-6 mb-5">${{product.price}}</h3>
+
+                    <hr>
+
+                    <a href="{% url 'product:product' product.category.slug product.slug %}" class="button is-dark is-uppercase">View</a>
+                </div>
+</div>-->
+<!--<div id="productDisplay">
+<div class="card">
+    <div class="photo">
+      <img src="{{ product.get_thumbnail }}">
+    </div>
+    <div class="description">
+      <h2>{{product.title}}</h2>
+      <h4>Popular House Plant</h4>
+      <h1>${{product.price}}</h1>
+      <p>Classic Peace Lily is a spathiphyllum floor plant arranged in a bamboo planter with a blue & red ribbom and butterfly pick.</p>
+      <button>Add to Cart</button>
+      <a href="{% url 'product:product' product.category.slug product.slug %}" class="button">View</a>
+    </div>
+  </div>
+</div>
+-->
+<div class="wrapper">
+	<div class="outer">
+		<div class="content animated fadeInLeft">
+			<span class="bg animated fadeInDown">EXCLUSIVE</span>
+			<h1>{{product.title}}<br/></h1>
+			<p>{{product.description}}.</p>
+			
+			<div class="button">
+				<a href="#">{{product.price}}fcfa</a><a href="{% url 'product:product' product.category.slug product.slug %}" class="cart-btn" href="#"><i class="cart-icon ion-bag"></i>SEE MORE</a>
+			</div>
+			
+		</div>
+		<img src="{{ product.get_thumbnail }}" width="50%" class="animated fadeInRight">
+	</div>
+</div>

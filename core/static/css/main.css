@@ -1,0 +1,220 @@
+
+
+
+/*--nav--*/
+body{
+	background-color: rgb(235, 205, 167);
+}
+.navContainercolor{
+	background-color:#111;
+	color: #fff;
+
+}
+.buttoncolor{
+	background-color: #c44206;
+	color: #fff;
+	border:#000;
+}
+ .navContainer .navbar{
+    align-items: center;
+    width: 100%;
+    position: fixed;
+ }
+.hoverTest a:hover{
+        --b: 0.1em;   /* the thickness of the line */
+        --c: #c44206; /* the color */
+        
+        color: #0000;
+        padding-block: var(--b);
+        background: 
+          linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+          linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+        -webkit-background-clip: text,padding-box;
+                background-clip: text,padding-box;
+        transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+      }
+      .hoverTest a:hover {
+        --_p: 100%;
+        --_s: .3s;
+      }
+
+/*----------------------------------------------------------------------------*/
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Montserrat;
+	background:#888;
+	width: 100%;
+	height: 100vh;
+}
+
+.outer {
+	position: relative;
+	background: #fff;
+	height: 80%;
+	width: 92%;
+	overflow: hidden;
+	display: flex;
+	border-radius: 10px;
+	border: #000;
+	align-items: center;
+}
+
+.outer img  {
+	position: absolute;
+	top: 10%;
+	bottom: 5%;
+	right: -1%;
+	z-index: 0;
+	animation-delay: 0.5s;
+	width: 60%;
+	height: 80%;
+	object-fit: cover;
+	border-radius: 25%;
+}
+.navbar-item img {
+	position: relative;
+	top: 0px;
+	z-index: 0;
+	animation-delay: 0.5s;
+}
+.navbar-item img a:hover{
+	background-color: #c44206;
+}
+
+.content {
+	animation-delay: 0.3s;
+	position: absolute;
+	left: 20px;
+	z-index: 3
+	
+}
+
+h1 {
+	color: #111;
+}
+
+p {
+	width: 280px;
+	font-size: 23px;
+	line-height: 1.4;
+	color: #000000;
+	margin: 20px 0;
+	
+}
+
+.bg {
+	display: inline-block;
+	color: #fff;
+	background: #c44206;
+	padding: 5px 10px;
+	border-radius: 50px;
+	font-size: .7em;
+}
+.button {
+	width: fit-content;
+	height: fit-content;
+	margin-top: 10px;
+	
+	
+	
+}
+
+.button a {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	font-size: 11px;
+	color: #111;
+	text-decoration: none;
+	padding: 10px 15px;
+	border: 1px solid #aaa;
+	font-weight: bold;
+	
+	
+}
+
+.button a:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -10px;
+	width: 0%;
+	background: #111;
+	height: 100%;
+	z-index: -1;
+	transition: width 0.3s ease-in-out;
+	transform: skew(-25deg);
+	transform-origin: right;
+}
+
+.button a:hover:after {
+	width: 150%;
+	left: -10px;
+	transform-origin: left;
+	
+}
+
+.button a:hover {
+	color: #fff;
+	transition: all 0.5s ease;
+}
+
+
+.button a:nth-of-type(1) {
+	border-radius: 50px 0 0 50px;
+	border-right: none;
+}
+
+.button a:nth-of-type(2) {
+	border-radius: 0px 50px 50px 0;
+}
+
+.cart-icon {
+	padding-right: 8px;
+	
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+/*# sourceMappingURL=test.css.map */
+
+/* Footer */
+
+.footer a{
+    margin-bottom: 15px;
+    display: inline-block;
+    color: #444;
+}
+
+/*  Product List Item*/
+.product-list-item .box .subtitle{
+    margin-bottom: 0;
+}
+
+.product-list-item .box .price{
+    color: #888;
+}
+
+
+/* For Notification */
+
+@keyframes show-toast {
+    0% {bottom: -100%}
+    20% {bottom: 50px}
+    80% {bottom: 50px}
+    100% {bottom: -100%}
+}
+
+.notification.is-toast{
+    position: fixed;
+    bottom: 100%;
+    right: 20px;
+    animation-name: show-toast;
+    animation-duration: 4s;
+}
